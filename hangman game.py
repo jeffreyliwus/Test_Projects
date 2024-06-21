@@ -13,6 +13,7 @@ possible_word = [
     "ghost",
     "flower",
     "pie",
+    "cookie",
 ]
 computer_action = random.choice(possible_word)
 print(computer_action)
