@@ -25,3 +25,18 @@ if __name__ == "__main__":
 
     while not pq.empty():
         print(pq.get())
+
+# REVERSED
+
+if __name__ == "__main__":
+    # Priority Queue with reversed order for strings
+    pq = queue.PriorityQueue()
+
+    # Add elements with negative priority to reverse the order
+    elements = ["B", "C", "A", "F", "D"]
+    for element in elements:
+        pq.put((-ord(element), element))  # Tuple with negative ordinal as priority
+
+    while not pq.empty():
+        # Since we stored tuples, we only want to print the string part
+        print(pq.get()[1])
